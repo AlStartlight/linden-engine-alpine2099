@@ -1,0 +1,948 @@
+{
+  "format": "linden-scene",
+  "version": 2,
+  "name": "Main",
+  "settings": {
+    "ambientColor": "#666666",
+    "skybox": null
+  },
+  "entities": [
+    {
+      "id": "ent-camera-main",
+      "name": "Main Camera",
+      "active": true,
+      "tags": [
+        "MainCamera"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              -28,
+              22,
+              -14
+            ],
+            "rotation": [
+              -52,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "type": "Camera",
+          "data": {
+            "fov": 55,
+            "near": 0.1,
+            "far": 1000,
+            "isActive": true
+          }
+        }
+      ],
+      "static": false
+    },
+    {
+      "id": "ent-dir-light",
+      "name": "Directional Light",
+      "active": true,
+      "tags": [],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              20,
+              45,
+              20
+            ],
+            "rotation": [
+              50,
+              -30,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "type": "Light",
+          "data": {
+            "type": "directional",
+            "color": "#ffffff",
+            "intensity": 1.2,
+            "castShadow": true
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-amb-light",
+      "name": "Ambient Light",
+      "active": true,
+      "tags": [],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              0,
+              20,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "type": "Light",
+          "data": {
+            "type": "ambient",
+            "color": "#94a3b8",
+            "intensity": 0.8
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-ground",
+      "name": "Battlefield Ground",
+      "active": true,
+      "tags": [
+        "Ground"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              90,
+              0.2,
+              90
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "box",
+            "color": "#2d6a4f",
+            "roughness": 0.8
+          }
+        },
+        {
+          "type": "BoxCollider",
+          "data": {
+            "size": {
+              "x": 90,
+              "y": 0.2,
+              "z": 90
+            }
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-lane-mid",
+      "name": "Mid Lane Road",
+      "active": true,
+      "tags": [],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              0,
+              0.05,
+              0
+            ],
+            "rotation": [
+              0,
+              -45,
+              0
+            ],
+            "scale": [
+              8,
+              0.1,
+              75
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "box",
+            "color": "#64748b",
+            "roughness": 0.6
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-lane-top1",
+      "name": "Top Lane Path V",
+      "active": true,
+      "tags": [],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              -25,
+              0.05,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              6,
+              0.1,
+              52
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "box",
+            "color": "#64748b",
+            "roughness": 0.6
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-lane-top2",
+      "name": "Top Lane Path H",
+      "active": true,
+      "tags": [],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              0,
+              0.05,
+              25
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              52,
+              0.1,
+              6
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "box",
+            "color": "#64748b",
+            "roughness": 0.6
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-lane-bot1",
+      "name": "Bot Lane Path H",
+      "active": true,
+      "tags": [],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              0,
+              0.05,
+              -25
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              52,
+              0.1,
+              6
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "box",
+            "color": "#64748b",
+            "roughness": 0.6
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-lane-bot2",
+      "name": "Bot Lane Path V",
+      "active": true,
+      "tags": [],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              25,
+              0.05,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              6,
+              0.1,
+              52
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "box",
+            "color": "#64748b",
+            "roughness": 0.6
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-river",
+      "name": "River Water",
+      "active": true,
+      "tags": [],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              0,
+              0.08,
+              0
+            ],
+            "rotation": [
+              0,
+              45,
+              0
+            ],
+            "scale": [
+              10,
+              0.1,
+              80
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "box",
+            "color": "#0284c7",
+            "roughness": 0.2,
+            "metalness": 0.2
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-base-blue",
+      "name": "Blue Base Crystal",
+      "active": true,
+      "tags": [
+        "BaseBlue"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              -28,
+              2,
+              -28
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              3,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "cylinder",
+            "color": "#38bdf8",
+            "roughness": 0.2
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-base-red",
+      "name": "Red Base Crystal",
+      "active": true,
+      "tags": [
+        "BaseRed"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              28,
+              2,
+              28
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              3,
+              4,
+              3
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "cylinder",
+            "color": "#ef4444",
+            "roughness": 0.2
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-turret-b-mid",
+      "name": "Blue Turret Mid",
+      "active": true,
+      "tags": [
+        "TurretBlue"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              -10,
+              2,
+              -10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1.8,
+              4,
+              1.8
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "cylinder",
+            "color": "#0284c7"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-turret-b-top",
+      "name": "Blue Turret Top",
+      "active": true,
+      "tags": [
+        "TurretBlue"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              -24,
+              2,
+              8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1.8,
+              4,
+              1.8
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "cylinder",
+            "color": "#0284c7"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-turret-b-bot",
+      "name": "Blue Turret Bot",
+      "active": true,
+      "tags": [
+        "TurretBlue"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              8,
+              2,
+              -24
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1.8,
+              4,
+              1.8
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "cylinder",
+            "color": "#0284c7"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-turret-r-mid",
+      "name": "Red Turret Mid",
+      "active": true,
+      "tags": [
+        "TurretRed"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              10,
+              2,
+              10
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1.8,
+              4,
+              1.8
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "cylinder",
+            "color": "#dc2626"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-turret-r-top",
+      "name": "Red Turret Top",
+      "active": true,
+      "tags": [
+        "TurretRed"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              -8,
+              2,
+              24
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1.8,
+              4,
+              1.8
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "cylinder",
+            "color": "#dc2626"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-turret-r-bot",
+      "name": "Red Turret Bot",
+      "active": true,
+      "tags": [
+        "TurretRed"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              24,
+              2,
+              -8
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1.8,
+              4,
+              1.8
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "cylinder",
+            "color": "#dc2626"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-bush-1",
+      "name": "Jungle Bush 1",
+      "active": true,
+      "tags": [
+        "Bush"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              -6,
+              0.6,
+              6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              3,
+              1.2,
+              3
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "sphere",
+            "color": "#166534"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-bush-2",
+      "name": "Jungle Bush 2",
+      "active": true,
+      "tags": [
+        "Bush"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              6,
+              0.6,
+              -6
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              3,
+              1.2,
+              3
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "sphere",
+            "color": "#166534"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-rock-1",
+      "name": "Jungle Barrier 1",
+      "active": true,
+      "tags": [
+        "Obstacle"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              -14,
+              1.5,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              4,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "box",
+            "color": "#475569"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-rock-2",
+      "name": "Jungle Barrier 2",
+      "active": true,
+      "tags": [
+        "Obstacle"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              0,
+              1.5,
+              -14
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              4,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "box",
+            "color": "#475569"
+          }
+        }
+      ],
+      "static": true
+    },
+    {
+      "id": "ent-player",
+      "name": "Player Hero",
+      "active": true,
+      "tags": [
+        "Player",
+        "Hero"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              -28,
+              1,
+              -26
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "type": "MeshRenderer",
+          "data": {
+            "primitive": "cylinder",
+            "color": "#dc2626",
+            "roughness": 0.3
+          }
+        },
+        {
+          "type": "Script",
+          "data": {
+            "src": "scripts/PlayerHeroController.ts",
+            "props": {}
+          }
+        },
+        {
+          "type": "HtmlUI",
+          "data": {
+            "src": "ui/moba_hud.html",
+            "mode": "screen"
+          }
+        }
+      ],
+      "static": false
+    },
+    {
+      "id": "ent-game-manager",
+      "name": "MOBA Game Manager",
+      "active": true,
+      "tags": [
+        "GameManager"
+      ],
+      "components": [
+        {
+          "type": "Transform",
+          "data": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "type": "Script",
+          "data": {
+            "src": "scripts/MobaGameManager.ts",
+            "props": {}
+          }
+        }
+      ],
+      "static": false
+    }
+  ]
+}

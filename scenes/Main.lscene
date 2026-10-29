@@ -1,0 +1,1222 @@
+{
+  "entities": [
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": -28,
+              "y": 22,
+              "z": -14
+            },
+            "rotation": {
+              "x": -52,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "aspect": 1.7777777777777777,
+            "backgroundColor": {
+              "a": 1,
+              "b": 0.1,
+              "g": 0.1,
+              "r": 0.1
+            },
+            "far": 1000,
+            "fov": 55,
+            "isActive": true,
+            "isEnabled": true,
+            "near": 0.1
+          },
+          "type": "Camera"
+        }
+      ],
+      "id": "ent-camera-main",
+      "layer": 0,
+      "name": "Main Camera",
+      "parentId": null,
+      "static": false,
+      "tags": [
+        "MainCamera"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 20,
+              "y": 45,
+              "z": 20
+            },
+            "rotation": {
+              "x": 50,
+              "y": -30,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#ffffff",
+            "intensity": 1.2,
+            "isEnabled": true,
+            "range": 100,
+            "type": "directional"
+          },
+          "type": "Light"
+        }
+      ],
+      "id": "ent-dir-light",
+      "layer": 0,
+      "name": "Directional Light",
+      "parentId": null,
+      "static": true,
+      "tags": []
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 0,
+              "y": 20,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#94a3b8",
+            "intensity": 0.8,
+            "isEnabled": true,
+            "range": 100,
+            "type": "ambient"
+          },
+          "type": "Light"
+        }
+      ],
+      "id": "ent-amb-light",
+      "layer": 0,
+      "name": "Ambient Light",
+      "parentId": null,
+      "static": true,
+      "tags": []
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 90,
+              "y": 0.2,
+              "z": 90
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#2d6a4f",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "box",
+            "receiveShadow": true,
+            "roughness": 0.8
+          },
+          "type": "MeshRenderer"
+        },
+        {
+          "data": {
+            "center": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "isEnabled": true,
+            "isTrigger": false,
+            "material": {
+              "bounciness": 0.1,
+              "friction": 0.5
+            },
+            "onCollisionEnter": [],
+            "onCollisionExit": [],
+            "onTriggerEnter": [],
+            "onTriggerExit": [],
+            "size": {
+              "x": 90,
+              "y": 0.2,
+              "z": 90
+            }
+          },
+          "type": "BoxCollider"
+        }
+      ],
+      "id": "ent-ground",
+      "layer": 0,
+      "name": "Battlefield Ground",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "Ground"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 0,
+              "y": 0.05,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": -45,
+              "z": 0
+            },
+            "scale": {
+              "x": 8,
+              "y": 0.1,
+              "z": 75
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#64748b",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "box",
+            "receiveShadow": true,
+            "roughness": 0.6
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-lane-mid",
+      "layer": 0,
+      "name": "Mid Lane Road",
+      "parentId": null,
+      "static": true,
+      "tags": []
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": -25,
+              "y": 0.05,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 6,
+              "y": 0.1,
+              "z": 52
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#64748b",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "box",
+            "receiveShadow": true,
+            "roughness": 0.6
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-lane-top1",
+      "layer": 0,
+      "name": "Top Lane Path V",
+      "parentId": null,
+      "static": true,
+      "tags": []
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 0,
+              "y": 0.05,
+              "z": 25
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 52,
+              "y": 0.1,
+              "z": 6
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#64748b",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "box",
+            "receiveShadow": true,
+            "roughness": 0.6
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-lane-top2",
+      "layer": 0,
+      "name": "Top Lane Path H",
+      "parentId": null,
+      "static": true,
+      "tags": []
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 0,
+              "y": 0.05,
+              "z": -25
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 52,
+              "y": 0.1,
+              "z": 6
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#64748b",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "box",
+            "receiveShadow": true,
+            "roughness": 0.6
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-lane-bot1",
+      "layer": 0,
+      "name": "Bot Lane Path H",
+      "parentId": null,
+      "static": true,
+      "tags": []
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 25,
+              "y": 0.05,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 6,
+              "y": 0.1,
+              "z": 52
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#64748b",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "box",
+            "receiveShadow": true,
+            "roughness": 0.6
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-lane-bot2",
+      "layer": 0,
+      "name": "Bot Lane Path V",
+      "parentId": null,
+      "static": true,
+      "tags": []
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 0,
+              "y": 0.08,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 45,
+              "z": 0
+            },
+            "scale": {
+              "x": 10,
+              "y": 0.1,
+              "z": 80
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#0284c7",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "metalness": 0.2,
+            "primitive": "box",
+            "receiveShadow": true,
+            "roughness": 0.2
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-river",
+      "layer": 0,
+      "name": "River Water",
+      "parentId": null,
+      "static": true,
+      "tags": []
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": -28,
+              "y": 2,
+              "z": -28
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 3,
+              "y": 4,
+              "z": 3
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#38bdf8",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "cylinder",
+            "receiveShadow": true,
+            "roughness": 0.2
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-base-blue",
+      "layer": 0,
+      "name": "Blue Base Crystal",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "BaseBlue"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 28,
+              "y": 2,
+              "z": 28
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 3,
+              "y": 4,
+              "z": 3
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#ef4444",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "cylinder",
+            "receiveShadow": true,
+            "roughness": 0.2
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-base-red",
+      "layer": 0,
+      "name": "Red Base Crystal",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "BaseRed"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": -10,
+              "y": 2,
+              "z": -10
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.8,
+              "y": 4,
+              "z": 1.8
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#0284c7",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "cylinder",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-turret-b-mid",
+      "layer": 0,
+      "name": "Blue Turret Mid",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "TurretBlue"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": -24,
+              "y": 2,
+              "z": 8
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.8,
+              "y": 4,
+              "z": 1.8
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#0284c7",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "cylinder",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-turret-b-top",
+      "layer": 0,
+      "name": "Blue Turret Top",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "TurretBlue"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 8,
+              "y": 2,
+              "z": -24
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.8,
+              "y": 4,
+              "z": 1.8
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#0284c7",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "cylinder",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-turret-b-bot",
+      "layer": 0,
+      "name": "Blue Turret Bot",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "TurretBlue"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 10,
+              "y": 2,
+              "z": 10
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.8,
+              "y": 4,
+              "z": 1.8
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#dc2626",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "cylinder",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-turret-r-mid",
+      "layer": 0,
+      "name": "Red Turret Mid",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "TurretRed"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": -8,
+              "y": 2,
+              "z": 24
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.8,
+              "y": 4,
+              "z": 1.8
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#dc2626",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "cylinder",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-turret-r-top",
+      "layer": 0,
+      "name": "Red Turret Top",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "TurretRed"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 24,
+              "y": 2,
+              "z": -8
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.8,
+              "y": 4,
+              "z": 1.8
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#dc2626",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "cylinder",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-turret-r-bot",
+      "layer": 0,
+      "name": "Red Turret Bot",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "TurretRed"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": -6,
+              "y": 0.6,
+              "z": 6
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 3,
+              "y": 1.2,
+              "z": 3
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#166534",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "sphere",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-bush-1",
+      "layer": 0,
+      "name": "Jungle Bush 1",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "Bush"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 6,
+              "y": 0.6,
+              "z": -6
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 3,
+              "y": 1.2,
+              "z": 3
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#166534",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "sphere",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-bush-2",
+      "layer": 0,
+      "name": "Jungle Bush 2",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "Bush"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": -14,
+              "y": 1.5,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 4,
+              "y": 3,
+              "z": 4
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#475569",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "box",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-rock-1",
+      "layer": 0,
+      "name": "Jungle Barrier 1",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "Obstacle"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 0,
+              "y": 1.5,
+              "z": -14
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 4,
+              "y": 3,
+              "z": 4
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#475569",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "box",
+            "receiveShadow": true
+          },
+          "type": "MeshRenderer"
+        }
+      ],
+      "id": "ent-rock-2",
+      "layer": 0,
+      "name": "Jungle Barrier 2",
+      "parentId": null,
+      "static": true,
+      "tags": [
+        "Obstacle"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": -28,
+              "y": 1,
+              "z": -26
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "castShadow": true,
+            "color": "#dc2626",
+            "isEnabled": true,
+            "isVisible": true,
+            "materialId": "",
+            "meshId": "",
+            "primitive": "cylinder",
+            "receiveShadow": true,
+            "roughness": 0.3
+          },
+          "type": "MeshRenderer"
+        },
+        {
+          "data": {
+            "isEnabled": true,
+            "props": {},
+            "src": "scripts/PlayerHeroController.ts"
+          },
+          "type": "Script"
+        },
+        {
+          "data": {
+            "isEnabled": true,
+            "mode": "screen",
+            "pixelSize": 0.01,
+            "pointerEvents": false,
+            "src": "ui/moba_hud.html",
+            "zIndex": 0
+          },
+          "type": "HtmlUI"
+        }
+      ],
+      "id": "ent-player",
+      "layer": 0,
+      "name": "Player Hero",
+      "parentId": null,
+      "static": false,
+      "tags": [
+        "Player",
+        "Hero"
+      ]
+    },
+    {
+      "active": true,
+      "components": [
+        {
+          "data": {
+            "children": [],
+            "isEnabled": true,
+            "parent": null,
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "type": "Transform"
+        },
+        {
+          "data": {
+            "isEnabled": true,
+            "props": {},
+            "src": "scripts/MobaGameManager.ts"
+          },
+          "type": "Script"
+        }
+      ],
+      "id": "ent-game-manager",
+      "layer": 0,
+      "name": "MOBA Game Manager",
+      "parentId": null,
+      "static": false,
+      "tags": [
+        "GameManager"
+      ]
+    }
+  ],
+  "format": "linden-scene",
+  "name": "Main",
+  "settings": {
+    "ambientColor": "#666666",
+    "skybox": null
+  },
+  "version": 2
+}

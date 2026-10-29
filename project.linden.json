@@ -1,0 +1,646 @@
+{
+  "name": "Alpine2099",
+  "version": "0.1.0",
+  "renderer": "webgpu",
+  "tags": [
+    "Player",
+    "Enemy",
+    "Pickup",
+    "Coin",
+    "Ground",
+    "Flying"
+  ],
+  "layers": [
+    "Default",
+    "TransparentFX",
+    "Ignore Raycast",
+    "",
+    "Water",
+    "UI",
+    "Player",
+    "Enemy"
+  ],
+  "collisionMatrix": [
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  ],
+  "input": {
+    "actions": [
+      {
+        "name": "Move",
+        "type": "vector2",
+        "bindings": [
+          "Gamepad/LeftStick",
+          "Touch/Joystick"
+        ],
+        "composites": [
+          {
+            "up": [
+              "Keyboard/KeyW"
+            ],
+            "down": [
+              "Keyboard/KeyS"
+            ],
+            "left": [
+              "Keyboard/KeyA"
+            ],
+            "right": [
+              "Keyboard/KeyD"
+            ]
+          },
+          {
+            "up": [
+              "Keyboard/ArrowUp"
+            ],
+            "down": [
+              "Keyboard/ArrowDown"
+            ],
+            "left": [
+              "Keyboard/ArrowLeft"
+            ],
+            "right": [
+              "Keyboard/ArrowRight"
+            ]
+          }
+        ],
+        "deadzone": 0.15
+      },
+      {
+        "name": "Turn",
+        "type": "axis",
+        "bindings": [],
+        "composites": [
+          {
+            "negative": [
+              "Keyboard/KeyQ",
+              "Gamepad/LeftShoulder"
+            ],
+            "positive": [
+              "Keyboard/KeyE",
+              "Gamepad/RightShoulder"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vertical",
+        "type": "axis",
+        "bindings": [],
+        "composites": [
+          {
+            "negative": [
+              "Keyboard/KeyQ",
+              "Gamepad/LeftTrigger"
+            ],
+            "positive": [
+              "Keyboard/KeyE",
+              "Gamepad/RightTrigger"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Look",
+        "type": "vector2",
+        "bindings": [
+          "Mouse/Delta",
+          "Gamepad/RightStick",
+          "Touch/Look"
+        ],
+        "deadzone": 0.15,
+        "sensitivity": 1
+      },
+      {
+        "name": "Jump",
+        "type": "button",
+        "bindings": [
+          "Keyboard/Space",
+          "Gamepad/ButtonSouth"
+        ]
+      },
+      {
+        "name": "Sprint",
+        "type": "button",
+        "bindings": [
+          "Keyboard/ShiftLeft",
+          "Gamepad/LeftStickPress",
+          "Touch/Joystick"
+        ],
+        "pressThreshold": 0.9
+      },
+      {
+        "name": "Crouch",
+        "type": "button",
+        "bindings": [
+          "Keyboard/KeyC",
+          "Keyboard/ControlLeft",
+          "Gamepad/ButtonEast"
+        ]
+      },
+      {
+        "name": "Interact",
+        "type": "button",
+        "bindings": [
+          "Keyboard/KeyF",
+          "Gamepad/ButtonWest"
+        ]
+      },
+      {
+        "name": "Attack",
+        "type": "button",
+        "bindings": [
+          "Mouse/LeftButton",
+          "Gamepad/ButtonNorth",
+          "Gamepad/RightTrigger"
+        ]
+      },
+      {
+        "name": "Skill1",
+        "type": "button",
+        "bindings": [
+          "Keyboard/KeyJ",
+          "Keyboard/Digit1"
+        ]
+      },
+      {
+        "name": "Skill2",
+        "type": "button",
+        "bindings": [
+          "Keyboard/KeyK",
+          "Keyboard/Digit2"
+        ]
+      },
+      {
+        "name": "Skill3",
+        "type": "button",
+        "bindings": [
+          "Keyboard/KeyL",
+          "Keyboard/Digit3"
+        ]
+      },
+      {
+        "name": "Recall",
+        "type": "button",
+        "bindings": [
+          "Keyboard/KeyB"
+        ]
+      },
+      {
+        "name": "Regen",
+        "type": "button",
+        "bindings": [
+          "Keyboard/KeyH",
+          "Keyboard/Digit4"
+        ]
+      }
+    ],
+    "touch": {
+      "enabled": "auto",
+      "scale": "auto",
+      "joystick": {
+        "side": "left",
+        "mode": "floating",
+        "radius": 64
+      },
+      "look": {
+        "enabled": true,
+        "area": "right-half",
+        "sensitivity": 1
+      },
+      "buttons": [
+        {
+          "id": "Jump",
+          "action": "Jump",
+          "label": "JUMP",
+          "icon": "jump",
+          "behavior": "hold",
+          "anchor": "bottom-right",
+          "x": 24,
+          "y": 32,
+          "size": 72
+        },
+        {
+          "id": "Attack",
+          "action": "Attack",
+          "label": "ATK",
+          "icon": "attack",
+          "behavior": "tap",
+          "anchor": "bottom-right",
+          "x": 112,
+          "y": 48,
+          "size": 60
+        },
+        {
+          "id": "Sprint",
+          "action": "Sprint",
+          "label": "RUN",
+          "icon": "run",
+          "behavior": "hold",
+          "anchor": "bottom-right",
+          "x": 40,
+          "y": 120,
+          "size": 52
+        },
+        {
+          "id": "Interact",
+          "action": "Interact",
+          "label": "USE",
+          "icon": "use",
+          "behavior": "tap",
+          "anchor": "bottom-right",
+          "x": 120,
+          "y": 128,
+          "size": 52
+        },
+        {
+          "id": "TurnLeft",
+          "action": "Turn",
+          "value": -1,
+          "label": "Q",
+          "icon": "turn-left",
+          "anchor": "bottom-left",
+          "x": 24,
+          "y": 190,
+          "size": 44
+        },
+        {
+          "id": "TurnRight",
+          "action": "Turn",
+          "value": 1,
+          "label": "E",
+          "icon": "turn-right",
+          "anchor": "bottom-left",
+          "x": 80,
+          "y": 190,
+          "size": 44
+        }
+      ],
+      "opacity": 0.6,
+      "safeArea": true
+    }
+  },
+  "services": [],
+  "scenesInBuild": [
+    "scenes/Main.lscene"
+  ],
+  "exportPresets": [
+    {
+      "id": "preset-windows-desktop",
+      "name": "Windows Desktop",
+      "platform": "windows",
+      "backend": "linden",
+      "arch": [
+        "x64"
+      ],
+      "output": "build/windows/Alpine2099.exe",
+      "mode": "release",
+      "appName": "Alpine2099"
+    },
+    {
+      "id": "preset-macos-desktop",
+      "name": "macOS",
+      "platform": "macos",
+      "backend": "linden",
+      "arch": [
+        "universal"
+      ],
+      "output": "build/mac/Alpine2099.dmg",
+      "mode": "release",
+      "appName": "Alpine2099"
+    },
+    {
+      "id": "preset-linux-desktop",
+      "name": "Linux",
+      "platform": "linux",
+      "backend": "linden",
+      "arch": [
+        "x64"
+      ],
+      "output": "build/linux/Alpine2099.AppImage",
+      "mode": "release",
+      "appName": "Alpine2099"
+    },
+    {
+      "id": "preset-web-html5",
+      "name": "Web",
+      "platform": "web",
+      "backend": "linden",
+      "arch": [
+        "wasm"
+      ],
+      "output": "build/web/index.html",
+      "mode": "release",
+      "appName": "Alpine2099"
+    },
+    {
+      "id": "preset-android",
+      "name": "Android",
+      "platform": "android",
+      "backend": "godot",
+      "arch": [
+        "arm64"
+      ],
+      "output": "build/android/Alpine2099.apk",
+      "mode": "debug",
+      "appName": "Alpine2099"
+    },
+    {
+      "id": "preset-ios",
+      "name": "iOS",
+      "platform": "ios",
+      "backend": "godot",
+      "arch": [
+        "arm64"
+      ],
+      "output": "build/ios/Alpine2099.ipa",
+      "mode": "debug",
+      "appName": "Alpine2099"
+    }
+  ]
+}
